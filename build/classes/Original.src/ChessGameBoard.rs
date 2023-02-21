@@ -1,2 +1,0 @@
-ChessGameBoard$BoardListener
-ChessGameBoard

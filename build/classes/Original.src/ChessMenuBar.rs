@@ -1,2 +1,0 @@
-ChessMenuBar
-ChessMenuBar$MenuListener
