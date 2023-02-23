@@ -1,4 +1,4 @@
-package org.Main;
+package org.main;
 
 import java.io.Serializable;
 import javax.swing.JLabel;

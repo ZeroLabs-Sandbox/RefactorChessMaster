@@ -1,4 +1,4 @@
-package org.Main;
+package org.main;
 
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
