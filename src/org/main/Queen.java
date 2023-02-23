@@ -65,18 +65,18 @@ public class Queen
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/WhiteQueen.gif")
+                getClass().getResource("/org/main/ChessImages/WhiteQueen.gif")
             );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/BlackQueen.gif")
+                getClass().getResource("/org/main/ChessImages/BlackQueen.gif")
             );            
         }
         else
         {
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/default-Unassigned.gif")
+                getClass().getResource("/org/main/ChessImages/default-Unassigned.gif")
             ); 
         }
     }

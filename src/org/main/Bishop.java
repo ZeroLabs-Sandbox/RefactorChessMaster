@@ -57,17 +57,17 @@ public class Bishop extends ChessGamePiece{
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/WhiteBishop.gif")
+                getClass().getResource("/org/main/ChessImages/WhiteBishop.gif")
             );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/BlackBishop.gif")
+                getClass().getResource("/org/main/ChessImages/BlackBishop.gif")
             );
         }
         else{
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/BlackBishop.gif")
+                getClass().getResource("/org/main/ChessImages/BlackBishop.gif")
             );
         }
     }

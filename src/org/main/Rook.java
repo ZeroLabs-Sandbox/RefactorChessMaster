@@ -57,18 +57,18 @@ public class Rook
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/WhiteRook.gif")
+                getClass().getResource("/org/main/ChessImages/WhiteRook.gif")
             );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/BlackRook.gif")
+                getClass().getResource("/org/main/ChessImages/BlackRook.gif")
             );            
         }
         else
         {
             return new ImageIcon(
-                getClass().getResource("/Main/ChessImages/default-Unassigned.gif")
+                getClass().getResource("/org/main/ChessImages/default-Unassigned.gif")
             );        
         }
     }
