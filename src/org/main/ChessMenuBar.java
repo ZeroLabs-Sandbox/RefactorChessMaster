@@ -100,6 +100,9 @@ public class ChessMenuBar
         while ( possibleFrame != null && !( possibleFrame instanceof JFrame ) ){
             possibleFrame = possibleFrame.getParent();
         }
+        if(possibleFrame==null) {
+        	return;
+        }
         JFrame frame = (JFrame)possibleFrame;
         frame.setVisible( false );
         frame.dispose();

@@ -1,6 +1,5 @@
 package org.main;
 
-import java.io.Serializable;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 // -------------------------------------------------------------------------
@@ -13,7 +12,7 @@ import javax.swing.JPanel;
  * @version 2010.11.17
  */
 public class BoardSquare
-    extends JPanel implements Serializable{
+    extends JPanel{
     private final int            row;
     private final int            col;
     private ChessGamePiece piece;
