@@ -82,7 +82,7 @@ public class King
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("/org/main/ChessImages/WhiteKing.gif" )
+                getClass().getResource("/org/main/ChessImages/BlackKing.gif" )
             );            
         }
         else

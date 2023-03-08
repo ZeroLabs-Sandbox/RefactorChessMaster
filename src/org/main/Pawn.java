@@ -70,9 +70,29 @@ public class Pawn
      *            the game board to calculate moves on
      * @return ArrayList<String> the moves
      */
+    private ArrayList<String> checkEnemyCapturePoints(ChessGameBoard board,ArrayList<String> moves){
+    	 if ( getColorOfPiece() == ChessGamePiece.WHITE ){
+             if ( isEnemy( board, pieceRow - 1, pieceColumn - 1 ) ){
+                 moves.add( ( pieceRow - 1 ) + "," + ( pieceColumn - 1 ) );
+             }
+             if ( isEnemy( board, pieceRow - 1, pieceColumn + 1 ) ){
+                 moves.add( ( pieceRow - 1 ) + "," + ( pieceColumn + 1 ) );
+             }
+         }
+         else
+         {
+             if ( isEnemy( board, pieceRow + 1, pieceColumn - 1 ) ){
+                 moves.add( ( pieceRow + 1 ) + "," + ( pieceColumn - 1 ) );
+             }
+             if ( isEnemy( board, pieceRow + 1, pieceColumn + 1 ) ){
+                 moves.add( ( pieceRow + 1 ) + "," + ( pieceColumn + 1 ) );
+             }
+         }
+    	 return moves;
+    }
     @Override
     protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
-        ArrayList<String> moves = new ArrayList<>();
+        ArrayList<String> moves = new ArrayList<String>();
         if ( isPieceOnScreen() ){
             int currRow =
                 getColorOfPiece() == ChessGamePiece.WHITE
@@ -99,23 +119,7 @@ public class Pawn
                 count++;
             }
             // check for enemy capture points
-            if ( getColorOfPiece() == ChessGamePiece.WHITE ){
-                if ( isEnemy( board, pieceRow - 1, pieceColumn - 1 ) ){
-                    moves.add( ( pieceRow - 1 ) + "," + ( pieceColumn - 1 ) );
-                }
-                if ( isEnemy( board, pieceRow - 1, pieceColumn + 1 ) ){
-                    moves.add( ( pieceRow - 1 ) + "," + ( pieceColumn + 1 ) );
-                }
-            }
-            else
-            {
-                if ( isEnemy( board, pieceRow + 1, pieceColumn - 1 ) ){
-                    moves.add( ( pieceRow + 1 ) + "," + ( pieceColumn - 1 ) );
-                }
-                if ( isEnemy( board, pieceRow + 1, pieceColumn + 1 ) ){
-                    moves.add( ( pieceRow + 1 ) + "," + ( pieceColumn + 1 ) );
-                }
-            }
+            checkEnemyCapturePoints(board, moves);
         }
         return moves;
     }
@@ -144,3 +148,4 @@ public class Pawn
         }
     }
 }
+
